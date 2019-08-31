@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Memory Game Exit</title>
+    <link rel="stylesheet" type="text/css" href="../Projects/memoryGame.css">
+    <script src="../Projects/memoryGame.js"></script>
+</head>
+<body id = "backG">
+   
+        <center><h1>HAVE A GOOD DAY!!!<br>GOOD BYE!!</h1>
+        <p>
+        <button type="button" class="btn" onclick="speak2()"><a href="../Projects/memoryGame.html">Return to HOME</a></button>
+        </p></center>
+        <script> const synth = window.speechSynthesis;
+                voices = synth.getVoices()  
+
+                const speak2 = () => {
+                  var msg = new SpeechSynthesisUtterance();
+                    var voices = window.speechSynthesis.getVoices();
+                    msg.voice = voices[3];
+                    /* msg.text = "A Friendly Reminder! THIS IS A MIND GAME, SO DO NOT FOCUS IN THE BACKGROUND!"  
+                    +"FOCUS MORE ON THE CARDS INSTEAD! NOW CLOSE AND LET'S PLAY....";  */
+                    msg.text ="Mohamed, please ask if there's any question! AND THANK YOU ALL FOR YOUR ATTENTION"; 
+                    speechSynthesis.speak(msg);
+                };
+                
+                </script>
+
+
+        <!-- all of these tags to make the background to the fit size  -->
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        
+        
+        
+
+
+</body>
+</html> 

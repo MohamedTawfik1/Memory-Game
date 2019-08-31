@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Game page 2</title>
+    <link rel="stylesheet" type="text/css" href="../Projects/memoryGame.css">
+    <script src="../Projects/memoryGame.js"></script>
+</head>
+<body> 
+    <!-- this is the div on top of the Ecit page to -->
+    <div id="spaceOntop">
+        <button type="button" class="btn">
+            <a href="../Projects/memoryGame.html">GO BACK</a></button>
+        <button type="button" class="btn"><a href="../Projects/memoryGameExit.html">EXIT</a></button>    
+    </div>
+
+    <!--adding div tag for the memory board-->
+    <div id="memory_board">
+        <!-- this function to jenrat the newBoard -->
+        <script>newBoard();</script>
+        
+    </div>
+
+    <div class ='reminderMesg' >
+        <div class="reminderHeader">A Friendly Reminder!</div>
+        <span class="closeMesg" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="theReminder">
+            <p>THIS IS A MIND GAME, SO DO NOT FOCUS IN THE BACKGROUND! 
+                <br>FOCUS MORE ON THE CARDS INSTEAD! AND NOW LET'S PLAY....Close</p>
+        </div>
+
+    </div>
+    
+            
+    
+        
+</body>
+
+</html> 

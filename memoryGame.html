@@ -1,0 +1,102 @@
+<!-- this is the welcome html page-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Memory Game</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../Projects/memoryGame.css'>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Kalam&display=swap" rel="stylesheet">
+   
+</head>
+<!-- ----------------------------------------------------------------------------------------------------- -->
+<body>
+    <!-- POST VS GET 
+        POST is more secure way of transferring data
+        GET is used to request data from a specified resource -->
+<!-- ------------------------------------------------------------------------------------------------------ -->
+    <!-- POST value to send  the data to the web server to be processed -->
+    <form  method="POST" action="../Projects/memoryGame2.html">
+    <center><h1>Welcome to our Memory game</h1></center>
+    <hr>
+<!-- this is how to write a JS code directly inside of scipt tags, by giving it elements event handler-->
+    <center><h2>Change the background</h2>
+        <input type="button" class="btn" value="Purple" onclick="document.bgColor='purple'">
+        <input type="button" class="btn" value="Blue" onclick="document.bgColor='blue'">
+        <input type="button" class="btn" value="Green" onclick="document.bgColor='green'">
+        <input type="button" class="btn" value="Gold" onclick="document.bgColor='gold'">
+        <input type="button" class="btn" value="Pink" onclick="document.bgColor='#f9d2a2'">
+    </center>
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+
+<p>&nbsp;</p>
+
+<!-- creating a divider tag, div, to expline the technologies used in this project -->
+    <h2 class="floated_title"><marquee>
+        Technologies used in this game <br>
+        <em>__HTML, CSS, JavaScript__</em>
+    </marquee> </h2> 
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+
+<!-- instruction how to play the game -->
+    <P><u><b>How to play this Memory Game:</b></u></P>
+ <!-- unordered list -->   
+    <ul>
+       <li title='step 1'>
+           Click on a card to flip over.
+       </li>
+       <li title='step 2'>
+           Click on another card and see if they match.
+       </li>
+       <li title='step 3'>
+           Match all the cards togther.
+       </li>
+       <li title='step 4'>
+           If they don't match remember where it was. 
+       </li>
+       <li title='step 5'>
+           Keep in mind when you match all the cards, cards will shuffle at random.
+       </li>
+    </ul>
+    
+    
+    <input type="submit" class="LetPlay" value="Click to start the GAME" onclick="speakMsg()">
+</form>
+            
+    <P>
+            &nbsp;
+        </P>
+        <center>
+    <a href="https://revature.com/join-our-team/?gclid=CjwKCAjwnf7qBRAtEiwAseBO_I8dfvE1XLeFxwqv9xyVewobhiG3Z2gCc0kQLmKJk8LWls_4gf5N0RoCwMsQAvD_BwE">
+        <img src="https://3g4d13k75x47q7v53surz1gi-wpengine.netdna-ssl.com/wp-content/themes/revature/imgs/logo.png" 
+        alt="Revature " class="revatureLogo"></a>
+                <P>
+                    &nbsp;
+                </P>
+    <!-- this is the function that says the message -->
+        <script> const synth = window.speechSynthesis;
+        // this is how we call speechSynthesis api 
+                const speakMsg = () => {
+                  var msg = new SpeechSynthesisUtterance();
+                    var voices = synth.getVoices(); // retrieving all the voices 
+                    msg.voice = voices[3]; // picking the voice 3 
+                   msg.text = "A Friendly Reminder! THIS IS A MIND GAME, SO DO NOT FOCUS IN THE BACKGROUND!"  
+                    +"FOCUS MORE ON THE CARDS INSTEAD! NOW CLOSE AND LET'S PLAY...."; 
+                    /* msg.text ="Mohamed, I love you!";  */
+                    synth.speak(msg);
+                };
+            
+                </script>
+                
+
+
+    <script src='../Projects/memoryGame.js'></script>
+    <hr>
+    <p>
+        &copy; Mohamed Tawfik
+    </p>
+</body>
+</html>
+
+
